@@ -17,9 +17,13 @@ export class ObservationsController {
   findAll() {
     return this.observationsService.findAll();
   }
+  @Get('/:id')
+  findOne(@Param('id') id: number) {
+    return this.observationsService.findOne(id);
+  }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.observationsService.findOne(+id);
+  @Get('/:id/photos')
+  findAllPhotos(@Param('id') id: number) {
+    return this.observationsService.findPhotos(id);
   }
 }
