@@ -1,19 +1,19 @@
 import { Injectable } from '@nestjs/common';
-import { NaturalistService } from 'src/naturalist/naturalist.service';
+import { NaturalistService } from '../shared/naturalist';
 
 @Injectable()
 export class TaxaService {
-  constructor(private naturalistService: NaturalistService) {}
+  constructor() {}
 
   findOne(id: number) {
     return `This action returns a #${id} taxa`;
   }
 
   findAllPhotos(id: number) {
-    return this.naturalistService.getPhotosByTaxa(id);
+    return NaturalistService.getPhotosByTaxa(id);
   }
 
   findAllTaxaAtRankDescendants(id: number, rank: string) {
-    return this.naturalistService.getTaxaAtRankDescendantsTaxa(id, rank);
+    return NaturalistService.getTaxaAtRankDescendantsTaxa(id, rank);
   }
 }

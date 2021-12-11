@@ -1,9 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { NaturalistService } from 'src/naturalist/naturalist.service';
 
 @Injectable()
 export class ObservationsService {
-  constructor(private naturalistService: NaturalistService) {}
 
   findOne(id: number) {
     return `This action returns an observation`;

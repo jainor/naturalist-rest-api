@@ -8,11 +8,11 @@ import {
   Delete,
 } from '@nestjs/common';
 import { TaxaService } from './taxa.service';
-import { NaturalistService } from 'src/naturalist/naturalist.service';
 
 @Controller('taxa')
 export class TaxaController {
   constructor(private readonly taxaService: TaxaService) {}
+
   @Get(':id/rank/:rank')
   findTaxaDescendantsWithRank(
     @Param('id') id: number,
