@@ -35,9 +35,9 @@ export class NaturalistService {
         const url = records[i].photo.url.replace('square', 'large');
 
         // tslint:disable-next-line:no-console
-        ids.push( {
-          id : records[i].photo.id ,
-          url : url,
+        ids.push({
+          id: records[i].photo.id,
+          url: url,
         });
       }
     } catch (e) {
