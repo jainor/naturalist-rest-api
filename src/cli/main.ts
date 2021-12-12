@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+'use strict';
+
 import * as fs from 'fs';
 import axios from 'axios';
 import * as path from 'path';
